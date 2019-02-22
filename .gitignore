@@ -38,6 +38,9 @@
 #CSV
 *.csv
 
+#JS
+*.js
+
 # Package Files #
 *.jar
 *.war
