@@ -3,7 +3,6 @@ package ua.lviv.iot.musicalInstruments.models;
 import ua.lviv.iot.musicalInstruments.enums.MaterialOfDeck;
 import ua.lviv.iot.musicalInstruments.enums.MaterialOfFingerBoard;
 import ua.lviv.iot.musicalInstruments.enums.TypeOfGuitar;
-import ua.lviv.iot.musicalInstruments.enums.TypeOfInstrument;
 
 public class Guitar extends MusicalInstrument {
 
@@ -12,24 +11,28 @@ public class Guitar extends MusicalInstrument {
   private TypeOfGuitar typeOfGuitar;
   private MaterialOfDeck materialOfDeck;
 
-  public Guitar() { }
+  public Guitar(final MusicalInstrument instrument, final int numOfStrings,
+                final MaterialOfFingerBoard materialOfFingerBoard,
+                final TypeOfGuitar typeOfGuitar,
+                final MaterialOfDeck materialOfDeck) {
 
-  public Guitar(double price, double length, String producer, TypeOfInstrument typeOfInstrument,
-                double weight, int numOfStrings, MaterialOfFingerBoard materialOfFingerBoard,
-                TypeOfGuitar typeOfGuitar, MaterialOfDeck materialOfDeck) {
-    super(price, length, producer, typeOfInstrument, weight);
+    super(instrument.getPrice(),
+          instrument.getLength(),
+          instrument.getProducer(),
+          instrument.getTypeOfInstrument(),
+          instrument.getWeight());
+
     this.numOfStrings = numOfStrings;
     this.materialOfFingerBoard = materialOfFingerBoard;
     this.typeOfGuitar = typeOfGuitar;
     this.materialOfDeck = materialOfDeck;
   }
 
-
   public int getNumOfStrings() {
     return numOfStrings;
   }
 
-  public void setNumOfStrings(int numOfStrings) {
+  public void setNumOfStrings(final int numOfStrings) {
     this.numOfStrings = numOfStrings;
   }
 
@@ -37,7 +40,7 @@ public class Guitar extends MusicalInstrument {
     return materialOfFingerBoard;
   }
 
-  public void setMaterialOfFingerBoard(MaterialOfFingerBoard materialOfFingerBoard) {
+  public void setMaterialOfFingerBoard(final MaterialOfFingerBoard materialOfFingerBoard) {
     this.materialOfFingerBoard = materialOfFingerBoard;
   }
 
@@ -53,7 +56,7 @@ public class Guitar extends MusicalInstrument {
     return materialOfDeck;
   }
 
-  public void setMaterialOfDeck(MaterialOfDeck materialOfDeck) {
+  public void setMaterialOfDeck(final MaterialOfDeck materialOfDeck) {
     this.materialOfDeck = materialOfDeck;
   }
 }

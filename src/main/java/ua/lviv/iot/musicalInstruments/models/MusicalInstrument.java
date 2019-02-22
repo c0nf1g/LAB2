@@ -10,10 +10,12 @@ public class MusicalInstrument {
   private TypeOfInstrument typeOfInstrument;
   private double weight;
 
-  public MusicalInstrument() {}
-
-  public MusicalInstrument(double price, double length, String producer, TypeOfInstrument typeOfInstrument,
+  public MusicalInstrument(final double price,
+                           final double length,
+                           final String producer,
+                           TypeOfInstrument typeOfInstrument,
                            double weight) {
+
     this.price = price;
     this.length = length;
     this.producer = producer;
@@ -25,7 +27,7 @@ public class MusicalInstrument {
     return price;
   }
 
-  public void setPrice(double price) {
+  public void setPrice(final double price) {
     this.price = price;
   }
 
@@ -33,7 +35,7 @@ public class MusicalInstrument {
     return length;
   }
 
-  public void setLength(double length) {
+  public void setLength(final double length) {
     this.length = length;
   }
 
@@ -41,7 +43,7 @@ public class MusicalInstrument {
     return producer;
   }
 
-  public void setProducer(String producer) {
+  public void setProducer(final String producer) {
     this.producer = producer;
   }
 
@@ -49,7 +51,7 @@ public class MusicalInstrument {
     return typeOfInstrument;
   }
 
-  public void setTypeOfInstrument(TypeOfInstrument typeOfInstrument) {
+  public void setTypeOfInstrument(final TypeOfInstrument typeOfInstrument) {
     this.typeOfInstrument = typeOfInstrument;
   }
 
@@ -57,7 +59,7 @@ public class MusicalInstrument {
     return weight;
   }
 
-  public void setWeight(double weight) {
+  public void setWeight(final double weight) {
     this.weight = weight;
   }
 }

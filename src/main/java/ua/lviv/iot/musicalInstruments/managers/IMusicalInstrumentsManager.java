@@ -7,17 +7,15 @@ import java.util.List;
 
 public interface IMusicalInstrumentsManager {
 
-  public List<MusicalInstrument> sortByPrice(List<MusicalInstrument> listInstruments,
-                                             boolean descending);
+  List<MusicalInstrument> sortByPrice(List<MusicalInstrument> listInstruments,
+                                      boolean descending);
 
-  public List<MusicalInstrument> sortByWeight(List<MusicalInstrument> listInstruments,
-                                              boolean descending);
+  List<MusicalInstrument> sortByWeight(List<MusicalInstrument> listInstruments,
+                                       boolean descending);
 
-  public List<MusicalInstrument> findByTypeOfInstrument(List<MusicalInstrument> listInstruments,
-                                                        TypeOfInstrument typeOfInstrument);
+  List<MusicalInstrument> findByType(List<MusicalInstrument> listInstruments,
+                                     TypeOfInstrument typeOfInstrument);
 
-  public List<MusicalInstrument> findByProducer(List<MusicalInstrument> listInstruments,
-                                                String producer);
-
-  public List<MusicalInstrument> createObjects(List<MusicalInstrument> instruments);
+  List<MusicalInstrument> findByProducer(List<MusicalInstrument> listInstruments,
+                                         String producer);
 }

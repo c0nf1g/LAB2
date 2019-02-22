@@ -1,7 +1,6 @@
 package ua.lviv.iot.musicalInstruments.models;
 
 import ua.lviv.iot.musicalInstruments.enums.TypeOfDrum;
-import ua.lviv.iot.musicalInstruments.enums.TypeOfInstrument;
 import ua.lviv.iot.musicalInstruments.enums.TypeOfUse;
 import ua.lviv.iot.musicalInstruments.enums.Wood;
 
@@ -11,12 +10,14 @@ public class Drum extends MusicalInstrument {
   private TypeOfDrum typeOfDrum;
   private TypeOfUse typeOfUse;
 
-  public Drum() {
-  }
+  public Drum(final MusicalInstrument instrument, final Wood wood,
+              final TypeOfDrum typeOfDrum, final TypeOfUse typeOfUse) {
+    super(instrument.getPrice(),
+          instrument.getLength(),
+          instrument.getProducer(),
+          instrument.getTypeOfInstrument(),
+          instrument.getWeight());
 
-  public Drum(double price, double length, String producer, TypeOfInstrument typeOfInstrument,
-              double weight, Wood wood, TypeOfDrum typeOfDrum, TypeOfUse typeOfUse) {
-    super(price, length, producer, typeOfInstrument, weight);
     this.wood = wood;
     this.typeOfDrum = typeOfDrum;
     this.typeOfUse = typeOfUse;
@@ -26,7 +27,7 @@ public class Drum extends MusicalInstrument {
     return wood;
   }
 
-  public void setWood(Wood wood) {
+  public void setWood(final Wood wood) {
     this.wood = wood;
   }
 
@@ -34,7 +35,7 @@ public class Drum extends MusicalInstrument {
     return typeOfDrum;
   }
 
-  public void setTypeOfDrum(TypeOfDrum typeOfDrum) {
+  public void setTypeOfDrum(final TypeOfDrum typeOfDrum) {
     this.typeOfDrum = typeOfDrum;
   }
 
@@ -42,7 +43,7 @@ public class Drum extends MusicalInstrument {
     return typeOfUse;
   }
 
-  public void setTypeOfUse(TypeOfUse typeOfUse) {
+  public void setTypeOfUse(final TypeOfUse typeOfUse) {
     this.typeOfUse = typeOfUse;
   }
 }

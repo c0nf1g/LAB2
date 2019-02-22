@@ -10,12 +10,17 @@ public class Trumpet extends MusicalInstrument {
   private TypeOfTrumpet typeOfTrumpet;
   private int numOfHoles;
 
-  public Trumpet() {
-  }
+  public Trumpet(final MusicalInstrument instrument,
+                 final Material material,
+                 final TypeOfTrumpet typeOfTrumpet,
+                 final int numOfHoles) {
 
-  public Trumpet(double price, double length, String producer, TypeOfInstrument typeOfInstrument,
-                 double weight, Material material, TypeOfTrumpet typeOfTrumpet, int numOfHoles) {
-    super(price, length, producer, typeOfInstrument, weight);
+    super(instrument.getPrice(),
+          instrument.getLength(),
+          instrument.getProducer(),
+          instrument.getTypeOfInstrument(),
+          instrument.getWeight());
+
     this.material = material;
     this.typeOfTrumpet = typeOfTrumpet;
     this.numOfHoles = numOfHoles;
@@ -25,7 +30,7 @@ public class Trumpet extends MusicalInstrument {
     return material;
   }
 
-  public void setMaterial(Material material) {
+  public void setMaterial(final Material material) {
     this.material = material;
   }
 
@@ -33,7 +38,7 @@ public class Trumpet extends MusicalInstrument {
     return typeOfTrumpet;
   }
 
-  public void setTypeOfTrumpet(TypeOfTrumpet typeOfTrumpet) {
+  public void setTypeOfTrumpet(final TypeOfTrumpet typeOfTrumpet) {
     this.typeOfTrumpet = typeOfTrumpet;
   }
 
@@ -41,7 +46,7 @@ public class Trumpet extends MusicalInstrument {
     return numOfHoles;
   }
 
-  public void setNumOfHoles(int numOfHoles) {
+  public void setNumOfHoles(final int numOfHoles) {
     this.numOfHoles = numOfHoles;
   }
 }
