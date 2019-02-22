@@ -35,6 +35,9 @@
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 
+#CSV
+*.csv
+
 # Package Files #
 *.jar
 *.war
@@ -49,3 +52,4 @@ hs_err_pid*
 
 #Other files
 checkstyle-cachefile
+readme.txt
