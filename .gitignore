@@ -1,6 +1,31 @@
 # Compiled class file
 *.class
 
+#.css files
+*.css
+
+#.lst files
+*.lst
+
+#.rss files
+*.rss
+
+#.png files
+*.png
+
+#.gif files
+*.gif
+
+#.html files
+*.html
+
+# XML files
+*.xml
+!pom.xml
+
+# IML files
+*.iml
+
 # Log file
 *.log
 
@@ -9,6 +34,12 @@
 
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
+
+#CSV
+*.csv
+
+#JS
+*.js
 
 # Package Files #
 *.jar
@@ -21,3 +52,7 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+
+#Other files
+checkstyle-cachefile
+readme.txt
