@@ -20,6 +20,20 @@ class MusicalInstrumentTest {
       TypeOfInstrument.WIND, 3.2);
 
   @Test
+  void getHeaders() {
+    String testAttributeString = "price,length,producer,typeOfInstrument,weight";
+
+    assertEquals(testInstrument.getHeaders(), testAttributeString);
+  }
+
+  @Test
+  void toCSV() {
+    String testAttributeString = "2312.1,2.3,TestProducer,WIND,3.2";
+
+    assertEquals(testInstrument.toCsv(), testAttributeString);
+  }
+
+  @Test
   void price() {
     assertEquals(2312.1, testInstrument.getPrice());
   }

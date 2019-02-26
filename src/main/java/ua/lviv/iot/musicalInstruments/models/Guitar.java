@@ -28,6 +28,22 @@ public class Guitar extends MusicalInstrument {
     this.materialOfDeck = materialOfDeck;
   }
 
+  public String getHeaders() {
+    return super.getHeaders() + "," +
+        "numOfStrings" + "," +
+        "materialOfFingerBoard" + "," +
+        "typeOfGuitar" + "," +
+        "materialOfDeck";
+  }
+
+  public String toCsv() {
+    return super.toCsv() + "," +
+        numOfStrings + "," +
+        materialOfFingerBoard + "," +
+        typeOfGuitar + "," +
+        materialOfDeck;
+  }
+
   public int getNumOfStrings() {
     return numOfStrings;
   }

@@ -23,6 +23,25 @@ public class MusicalInstrument {
     this.weight = weight;
   }
 
+  public MusicalInstrument() {
+  }
+
+  public String getHeaders() {
+    return "price" + "," +
+        "length" + "," +
+        "producer" + "," +
+        "typeOfInstrument" + "," +
+        "weight";
+  }
+
+  public String toCsv() {
+    return price + "," +
+        length + "," +
+        producer + "," +
+        typeOfInstrument + "," +
+        weight;
+  }
+
   public double getPrice() {
     return price;
   }
