@@ -24,6 +24,22 @@ class GuitarTest {
       TypeOfGuitar.ACUSTIC,  MaterialOfDeck.ALDER);
 
   @Test
+  void getHeaders() {
+    String testAttributeString = "price,length,producer,typeOfInstrument," +
+        "weight,numOfStrings,materialOfFingerBoard,typeOfGuitar,materialOfDeck";
+
+    assertEquals(testGuitar.getHeaders(), testAttributeString);
+  }
+
+  @Test
+  void toCSV() {
+    String testAttributeString = "123.3,1.2,TestProd,STRING,3.2," +
+        "4,ASH,ACUSTIC,ALDER";
+
+    assertEquals(testGuitar.toCsv(), testAttributeString);
+  }
+
+  @Test
   void guitarPrice() {
     assertEquals(123.3, testGuitar.getPrice());
   }

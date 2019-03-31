@@ -4,8 +4,10 @@ import ua.lviv.iot.musicalInstruments.enums.MaterialOfDeck;
 import ua.lviv.iot.musicalInstruments.enums.MaterialOfFingerBoard;
 import ua.lviv.iot.musicalInstruments.enums.TypeOfGuitar;
 
-public class Guitar extends MusicalInstrument {
+import javax.persistence.*;
 
+@Entity
+public class Guitar extends MusicalInstrument {
   private int numOfStrings;
   private MaterialOfFingerBoard materialOfFingerBoard;
   private TypeOfGuitar typeOfGuitar;
@@ -26,6 +28,31 @@ public class Guitar extends MusicalInstrument {
     this.materialOfFingerBoard = materialOfFingerBoard;
     this.typeOfGuitar = typeOfGuitar;
     this.materialOfDeck = materialOfDeck;
+  }
+
+  public String getHeaders() {
+    return super.getHeaders() + "," +
+        "numOfStrings" + "," +
+        "materialOfFingerBoard" + "," +
+        "typeOfGuitar" + "," +
+        "materialOfDeck";
+  }
+
+  public String toCsv() {
+    return super.toCsv() + "," +
+        numOfStrings + "," +
+        materialOfFingerBoard + "," +
+        typeOfGuitar + "," +
+        materialOfDeck;
+  }
+
+  @Override
+  public String toString() {
+    return String.format("Customer[id=%d, price='%s', length='%s', producer='%s'," +
+        " typeOfInstrument='%s', weight='%s', numOfString='%s', materialOfFingerBoard='%s'," +
+        " typeOfGuitar='%s', materialOfDeck='%s']", getId(), getPrice(), getLength(),
+        getProducer(), getTypeOfInstrument(), getWeight(), numOfStrings,
+        materialOfFingerBoard, typeOfGuitar, materialOfDeck);
   }
 
   public int getNumOfStrings() {

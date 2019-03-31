@@ -1,7 +1,6 @@
 package ua.lviv.iot.musicalInstruments.models;
 
 import ua.lviv.iot.musicalInstruments.enums.Material;
-import ua.lviv.iot.musicalInstruments.enums.TypeOfInstrument;
 import ua.lviv.iot.musicalInstruments.enums.TypeOfTrumpet;
 
 public class Trumpet extends MusicalInstrument {
@@ -24,6 +23,20 @@ public class Trumpet extends MusicalInstrument {
     this.material = material;
     this.typeOfTrumpet = typeOfTrumpet;
     this.numOfHoles = numOfHoles;
+  }
+
+  public String getHeaders() {
+    return super.getHeaders() + "," +
+        "material" + "," +
+        "typeOfTrumpet" + "," +
+        "numOfHoles";
+  }
+
+  public String toCsv() {
+    return super.toCsv() + "," +
+        material + "," +
+        typeOfTrumpet + "," +
+        numOfHoles;
   }
 
   public Material getMaterial() {

@@ -13,14 +13,28 @@ public class Drum extends MusicalInstrument {
   public Drum(final MusicalInstrument instrument, final Wood wood,
               final TypeOfDrum typeOfDrum, final TypeOfUse typeOfUse) {
     super(instrument.getPrice(),
-          instrument.getLength(),
-          instrument.getProducer(),
-          instrument.getTypeOfInstrument(),
-          instrument.getWeight());
+        instrument.getLength(),
+        instrument.getProducer(),
+        instrument.getTypeOfInstrument(),
+        instrument.getWeight());
 
     this.wood = wood;
     this.typeOfDrum = typeOfDrum;
     this.typeOfUse = typeOfUse;
+  }
+
+  public String getHeaders() {
+    return super.getHeaders() + "," +
+        "wood" + "," +
+        "typeOfDrum" + "," +
+        "typeOfUse";
+  }
+
+  public String toCsv() {
+    return super.toCsv() + "," +
+        wood + "," +
+        typeOfDrum + "," +
+        typeOfUse;
   }
 
   public Wood getWood() {

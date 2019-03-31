@@ -1,0 +1,6 @@
+price,length,producer,typeOfInstrument,weight
+1234.3,2345.8,TestProducer1,STRING,2.8
+price,length,producer,typeOfInstrument,weight
+1234.1,2345.5,TestProducer2,WIND,2.6
+price,length,producer,typeOfInstrument,weight
+2456.6,5385.9,TestProducer3,PERCURSSION,3.5

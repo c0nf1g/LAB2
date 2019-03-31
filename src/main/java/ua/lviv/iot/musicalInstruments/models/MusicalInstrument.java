@@ -2,8 +2,15 @@ package ua.lviv.iot.musicalInstruments.models;
 
 import ua.lviv.iot.musicalInstruments.enums.TypeOfInstrument;
 
-public class MusicalInstrument {
+import javax.persistence.*;
 
+
+@Entity
+@Inheritance
+public class MusicalInstrument {
+  @Id
+  @GeneratedValue(strategy=GenerationType.AUTO)
+  private Integer id;
   private double price;
   private double length;
   private String producer;
@@ -21,6 +28,33 @@ public class MusicalInstrument {
     this.producer = producer;
     this.typeOfInstrument = typeOfInstrument;
     this.weight = weight;
+  }
+
+  public MusicalInstrument() {
+  }
+
+  public String getHeaders() {
+    return "price" + "," +
+        "length" + "," +
+        "producer" + "," +
+        "typeOfInstrument" + "," +
+        "weight";
+  }
+
+  public String toCsv() {
+    return price + "," +
+        length + "," +
+        producer + "," +
+        typeOfInstrument + "," +
+        weight;
+  }
+
+  public Integer getId() {
+    return id;
+  }
+
+  public void setId(Integer id) {
+    this.id = id;
   }
 
   public double getPrice() {

@@ -21,6 +21,21 @@ class TrumpetTest {
   private Trumpet testTrumpet = new Trumpet(testInstrument, Material.CUPRUM, TypeOfTrumpet.BASSOON, 7);
 
   @Test
+  void getHeaders() {
+    String testAttributeString = "price,length,producer,typeOfInstrument,weight," +
+        "material,typeOfTrumpet,numOfHoles";
+
+    assertEquals(testTrumpet.getHeaders(), testAttributeString);
+  }
+
+  @Test
+  void toCSV() {
+    String testAttributeString = "7.3,4.3,TestProducer,WIND,5.3,CUPRUM,BASSOON,7";
+
+    assertEquals(testTrumpet.toCsv(), testAttributeString);
+  }
+
+  @Test
   void trumpetPrice() {
     assertEquals(7.3, testTrumpet.getPrice());
   }

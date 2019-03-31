@@ -23,6 +23,22 @@ class DrumTest {
   private Drum testDrum = new Drum(testInstrument, Wood.BIRCH, TypeOfDrum.FUSION, TypeOfUse.HANDS);
 
   @Test
+  void getHeaders() {
+    String testAttributeString = "price,length,producer,typeOfInstrument,weight," +
+        "wood,typeOfDrum,typeOfUse";
+
+    assertEquals(testDrum.getHeaders(), testAttributeString);
+  }
+
+  @Test
+  void toCSV() {
+    String testAttributeString = "3.1,3.2,TestProd,PERCURSSION,0.2,BIRCH,FUSION,HANDS";
+
+    assertEquals(testDrum.toCsv(), testAttributeString);
+
+  }
+
+  @Test
   void drumPrice() {
     assertEquals(3.1, testDrum.getPrice());
   }

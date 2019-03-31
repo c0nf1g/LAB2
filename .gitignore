@@ -1,8 +1,14 @@
 # Compiled class file
 *.class
 
+#txt files
+*.txt
+
 #.css files
 *.css
+
+#EXEC files
+*.exec
 
 #.lst files
 *.lst
@@ -22,6 +28,7 @@
 # XML files
 *.xml
 !pom.xml
+!checkstyle.xml
 
 # IML files
 *.iml
@@ -37,6 +44,8 @@
 
 #CSV
 *.csv
+!actualFile.csv
+!expectedFile.csv
 
 #JS
 *.js
@@ -56,3 +65,4 @@ hs_err_pid*
 #Other files
 checkstyle-cachefile
 readme.txt
+target
