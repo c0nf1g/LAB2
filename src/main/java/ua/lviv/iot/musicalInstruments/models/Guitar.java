@@ -8,10 +8,19 @@ import javax.persistence.*;
 
 @Entity
 public class Guitar extends MusicalInstrument {
+
   private int numOfStrings;
+
+  @Enumerated(EnumType.STRING)
   private MaterialOfFingerBoard materialOfFingerBoard;
+
+  @Enumerated(EnumType.STRING)
   private TypeOfGuitar typeOfGuitar;
+
+  @Enumerated(EnumType.STRING)
   private MaterialOfDeck materialOfDeck;
+
+  public Guitar() { }
 
   public Guitar(final MusicalInstrument instrument, final int numOfStrings,
                 final MaterialOfFingerBoard materialOfFingerBoard,

@@ -23,8 +23,14 @@ public class Application {
   public CommandLineRunner musicalInstrumentBean(GuitarRepository repository) {
     return (args) -> {
       repository.save(new Guitar(new MusicalInstrument(333.0, 34.1, "yamaha",
-          TypeOfInstrument.STRING, 2.3), 6, MaterialOfFingerBoard.ASH,
-          TypeOfGuitar.ELECTRIC, MaterialOfDeck.ALDER));
+              TypeOfInstrument.STRING, 2.3), 6, MaterialOfFingerBoard.ASH,
+              TypeOfGuitar.ELECTRIC, MaterialOfDeck.ALDER));
+      repository.save(new Guitar(new MusicalInstrument(333.0, 44.1, "zero",
+              TypeOfInstrument.STRING, 2.7), 9, MaterialOfFingerBoard.ASH,
+              TypeOfGuitar.ELECTRIC, MaterialOfDeck.ALDER));
+      repository.save(new Guitar(new MusicalInstrument(433.0, 54.1, "zeeeero",
+              TypeOfInstrument.STRING, 2.7), 9, MaterialOfFingerBoard.ASH,
+              TypeOfGuitar.ELECTRIC, MaterialOfDeck.ALDER));
     };
   }
 }
