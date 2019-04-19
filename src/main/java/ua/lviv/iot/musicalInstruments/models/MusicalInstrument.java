@@ -8,13 +8,20 @@ import javax.persistence.*;
 @Entity
 @Inheritance
 public class MusicalInstrument {
+
   @Id
   @GeneratedValue(strategy=GenerationType.AUTO)
   private Integer id;
+
   private double price;
+
   private double length;
+
   private String producer;
+
+  @Enumerated(EnumType.STRING)
   private TypeOfInstrument typeOfInstrument;
+
   private double weight;
 
   public MusicalInstrument(final double price,
